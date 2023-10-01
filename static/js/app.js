@@ -1,19 +1,19 @@
 // url of json data
 const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json";
 
-// Read the json data
-d3.json(url).then(function(data) {
-  console.log(data);
-
 //initialize the page with default plot
 function init() {
-  var dropdownMenu = d3.select("#selDataset");
-  data.names.forEach(function(name) {
-    dropdownMenu.append("option").text(name).property("value");
+  // Read the json data
+  d3.json(url).then(function(data) {
+    console.log(data);
+    var dropdownMenu = d3.select("#selDataset");
+    data.names.forEach(function(name) {
+      dropdownMenu.append("option").text(name).property("value");
+    });
+    var firstSample = data.names[0];
+    buildCharts(firstSample);
+    buildMetadata(firstSample);
   });
-  var firstSample = data.names[0];
-  buildCharts(firstSample);
-  buildMetadata(firstSample);
 }
 
 //call init() to initialize the page
@@ -104,8 +104,4 @@ function buildMetadata(sample) {
 function optionChanged(newSample) {
   buildCharts(newSample);
   buildMetadata(newSample);
-}
-
-});
-
-
+};
