@@ -3,6 +3,8 @@ This challenge required building an interactive dashboard to explore the Belly B
 
 A url of json data was provided and I utilized d3 to read in the data. Then I initialized the page with a default plot as well as dropdown menu. I then created a function to build the charts and used d3 to fetch the sample data for the plots. The next step was to build a bubble chart and bar chart using the sample data. I then created a function for building the metadata and another function to change the visuals when the dropdown menu changed.
 
+<img src="Visuals/Bellybutton_Biodiversity.webm">
+
 
 # References
 Hulcur, J. et al. (2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse,, but Predictable. Retrieved from http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/
